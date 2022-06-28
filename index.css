@@ -1,0 +1,7 @@
+#healthbar {
+    background-color: red;
+    width: 20px;
+    height: 200px;
+    position: absolute;
+    left: 410px;
+}

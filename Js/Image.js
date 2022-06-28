@@ -31,5 +31,6 @@ const inventoryMag = () => {
     inventory.style.justifyContect = 'spce-evenly'
     inventory.style.border = '4px solid black'
     inventory.style.backgroundColor = 'white'
-    inventory.addEventListener('')
+   document.body.append(inventory)
+   return inventory
 }
