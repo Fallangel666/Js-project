@@ -11,8 +11,8 @@ const npcAtk = {
    Def: 2,
 }
 //player attack
-const playerAttack = (player, target,) =>{
-let atkSum = player.Atk - npcAtk.Def,
+const playerAttack = (playerAtk, npcAtk,) =>{
+let atkSum = playerAtk.Atk - npcAtk.Def,
 lossingHealth= npcAtk.health - atkSum
 if (npcAtk.health < 1){
    alert('You win')
@@ -20,11 +20,12 @@ if (npcAtk.health < 1){
  }
 
  //npc attack
- const npcattack = (npc, target) => {
+ const npcattack = (npcAtk, playerAtk) => {
    let atkSum = npcAtk.Atk - playerAtk.Def,
    lossingHealth= playerAtk.health - atkSum
    if (playerAtk.health < 1){
-      alert('You lose')
+      alert('You lose');
+      remove(newPlayableCharacter)
    }
  } 
    

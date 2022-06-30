@@ -34,3 +34,5 @@ const inventoryMag = () => {
    document.body.append(inventory)
    return inventory
 }
+
+
