@@ -25,8 +25,8 @@ const playerAttack = (player, npc) => {
       alert('You win')
    }
    document.addEventListener('keydown', (e) => {
-      if (e.keycode == 65) {
-
+      if (e.key == "a") {
+console.log('attack')
       }
    })
    return lossingHealth

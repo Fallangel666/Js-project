@@ -1,3 +1,6 @@
+let x 
+let y 
+
 function move(element) {
     element.style.position = 'fixed'
 
@@ -8,8 +11,8 @@ function move(element) {
 
     function moveWithArrowKeys(left, bottom, callback){
         let direction = null;
-        let x = left;
-        let y = bottom;
+         x = left;
+         y = bottom;
 
         element.style.left = x + 'px'
         element.style.bottom = y + 'px'
