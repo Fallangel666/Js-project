@@ -9,9 +9,9 @@ const newImage = url => {
 }
 
 //add items to the site
-const newItem = url =>{
+const newItem = url => {
     let item = newImage(url)
-    item.addEventListener('click', ()=>{
+    item.addEventListener('click', () => {
         item.remove()
         let inventoryItem = document.createElement('img')
         inventoryItem.src = url;
@@ -31,8 +31,8 @@ const inventoryMag = () => {
     inventory.style.justifyContect = 'spce-evenly'
     inventory.style.border = '4px solid black'
     inventory.style.backgroundColor = 'white'
-   document.body.append(inventory)
-   return inventory
+    document.body.append(inventory)
+    return inventory
 }
 
 
