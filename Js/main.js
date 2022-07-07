@@ -1,8 +1,10 @@
 //puts player on screen
-const pc = newPlayer(100, 110)
+const pc = newPlayer(220, 420)
 
 //put npc on screen
-const npc = newNonPlayableCharacter(400, 400)
+const npc = newNonPlayableCharacter(110, 110)
 
 //player attack
 playerAttack()
+
+npc.walkSouth(1200)

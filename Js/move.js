@@ -1,37 +1,40 @@
-let x 
-let y 
+let playerX ;
+let playerY ;
+let playerPostion= {playerX, playerY}
 
-function move(element) {
+function move(element, x, y) {
     element.style.position = 'fixed'
+    playerX = x
+    playerY= y
 
-    function moveToCoordinates(left, bottom) {
+    function moveToCoordinates(left, top) {
         element.style.left = left + 'px'
-        element.style.bottom = bottom + 'px'
+        element.style.top = top + 'px'
     }
 
-    function moveWithArrowKeys(left, bottom, callback){
+    function moveWithArrowKeys(left, top, callback){
         let direction = null;
-         x = left;
-         y = bottom;
+         playerX = left;
+         playerY = top;
 
         element.style.left = x + 'px'
-        element.style.bottom = y + 'px'
+        element.style.top = y + 'px'
         
         function moveCharacter(){ 
             if(direction === 'west'){
-                x-=1
+                playerX-=1
             }
             if(direction === 'north'){
-                y+=1
+                playerY-=1
             }
             if(direction === 'east'){
-                x+=1
+                playerX+=1
             }
             if(direction === 'south'){
-                y-=1
+                playerY+=1
             }
-            element.style.left = x + 'px'
-            element.style.bottom = y + 'px'
+            element.style.left = playerX + 'px'
+            element.style.top = playerY + 'px'
         }
         
         setInterval(moveCharacter, 1)

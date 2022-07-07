@@ -1,26 +1,33 @@
-//attack funchion for player and npc
-let playerStat = {
-   health: 100,
-   Atk: 5,
-   Def: 3,
+//make where i can add more npc or players
+let statsProtyple={
+   name: 'Unknown',
+   health: 10,
+   atk:0,
+   def:0,
+}
+function Stats(){
+
 }
 
-let npcStat = {
-   health: 100,
-   Atk: 4,
-   Def: 2,
-}
-
-
-
-
+Stats.protatype = statsProtyple
+//player stats
+playerStat= new Stats();
+playerStat.name= 'player';
+playerStat.atk= 5;
+playerStat.def=4;
+//npc stats
+npcStat= new Stats();
+npcStat.name= 'npc';
+npcStat.atk= 4;
+npcStat.def= 3
 
 //player attack
 const playerAttack = (player, npc) => {
-   player = playerStat;
-   npc = npcStat;
-   let atkSum = playerStat.Atk - npcStat.Def;
-   lossingHealth = npcStat.health - atkSum;
+    player = playerStat;
+    npc = npcStat;
+   let atkSum = playerStat.atk - npcStat.def;
+   let lossingHealth = npcStat.health - atkSum;
+   npcStat.health = lossingHealth
    if (npcStat.health < 1) {
       alert('You win')
    }
@@ -29,20 +36,19 @@ const playerAttack = (player, npc) => {
 console.log('attack')
       }
    })
-   return lossingHealth
 }
 
 //npc attack
 const npcattack = (npc, player) => {
-   player = playerStat;
-   npc = npcStat;
-   let atkSum = npcStat.Atk - playerStat.Def;
-   lossingHealth = playerStat.health - atkSum
+    player = playerStat;
+    npc = npcStat;
+   let atkSum = npcStat.atk - playerStat.def;
+   let lossingHealth = playerStat.health - atkSum
+   playerStat.health = lossingHealth
    if (playerStat.health < 1) {
       alert('You lose');
       remove(newPlayableCharacter)
    }
-   return lossingHealth
 }
 
 

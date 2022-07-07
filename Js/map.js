@@ -41,10 +41,7 @@ for (let column = 0; column < map.length; column++) {
             (100 * row), // location y = tile height multiplied by current row
             100, // tile width
             100, // tile height
-            // c * map.tsize,
-            // r * tsize,
-            // map.tsize,
-            // map.tsize,
+           
         );
 
     }
