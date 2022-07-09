@@ -17,35 +17,31 @@ playerStat.atk= 5;
 playerStat.def=4;
 //npc stats
 npcStat= new Stats();
-npcStat.name= 'npc';
+npcStat.name= 'enemy';
 npcStat.atk= 4;
 npcStat.def= 3
 
 //player attack
-const playerAttack = (player, npc) => {
-    player = playerStat;
-    npc = npcStat;
-   let atkSum = playerStat.atk - npcStat.def;
-   let lossingHealth = npcStat.health - atkSum;
-   npcStat.health = lossingHealth
-   if (npcStat.health < 1) {
+const playerAttack = () => {
+   let atkSum = player.atk - enemy.def;
+   let lossingHealth = enemy.health - atkSum;
+   enemy.health = lossingHealth
+   if (enemy.health < 1) {
       alert('You win')
    }
    document.addEventListener('keydown', (e) => {
       if (e.key == "a") {
-console.log('attack')
+            
       }
    })
 }
 
 //npc attack
-const npcattack = (npc, player) => {
-    player = playerStat;
-    npc = npcStat;
-   let atkSum = npcStat.atk - playerStat.def;
-   let lossingHealth = playerStat.health - atkSum
-   playerStat.health = lossingHealth
-   if (playerStat.health < 1) {
+const npcAttack = () => {
+   let atkSum = enemy.atk - player.def;
+   let lossingHealth = player.health - atkSum
+   player.health = lossingHealth
+   if (player.health < 1) {
       alert('You lose');
       remove(newPlayableCharacter)
    }
